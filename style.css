@@ -1,0 +1,375 @@
+/*  */
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&family=Emilys+Candy&family=Itim&family=Mountains+of+Christmas:wght@400;700&display=swap');
+
+
+/* General Styling */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url("https://media1.tenor.com/m/S7zqThJnnSMAAAAC/have-a-beautiful-day.gif");
+    color: white;
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+}
+
+
+/* Header and Navigation */
+header {
+    position: sticky;
+    top: 0;
+    background-image: linear-gradient(to right,rgb(2, 2, 39),rgb(40, 1, 27),rgb(29, 3, 47),rgb(3, 39, 39),rgb(55, 3, 55));
+    padding: 20px 0;
+    z-index: 10;
+    text-align: center;
+    
+}
+
+#main-heading{
+    font-size: 3rem;
+    color: #fff;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    background: linear-gradient(to right, #a9cfe8, #477ba9, #aa55d1, #9840cf);
+    -webkit-background-clip: text;
+    color: transparent;
+    color:rgb(156, 182, 236);
+    font-family: "Cinzel", serif;
+    font-optical-sizing: auto;
+    font-weight: 900;
+    font-style: normal;
+    text-shadow: 2px 2px #ffffff;
+    
+}
+
+#main-nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+
+#main-nav ul li {
+    margin: 0 15px;
+}
+
+#main-nav ul li a {
+    text-decoration: none;
+    color: #c4d7eb;
+    font-size: 1.2rem;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+#main-nav ul li a:hover {
+    color: #0e0e58;
+    background-image: url("https://i.pinimg.com/originals/ea/0c/78/ea0c788fc31bd4f4a93345d70cb4c1e8.gif"); 
+    /* Golden color on hover */
+    padding: 20px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-weight: 900;
+}
+
+#hamburger-menu {
+    display: none; /* Default: hide hamburger */
+}
+
+/* Section Styling */
+section {
+    padding: 60px 20px;
+    min-height: 200px;
+    text-align: center;
+    background: rgba(0, 20, 40, 0.8);
+    margin-top: 50px;
+    border-radius: 10px;
+    margin-bottom: 40px;
+    position: relative;
+    opacity: 0.9;
+    overflow: hidden;
+    width:90vw;
+    margin-left:auto;
+    margin-right:auto;
+}
+
+#traditions ul{
+    padding: 60px 20px;
+    min-height: 200px;
+    text-align: center;
+    background-image: linear-gradient(to right,rgb(165, 165, 247),rgb(248, 150, 248),rgb(234, 111, 234));
+    margin-top: 40px;
+    border-radius: 20px;
+    margin-bottom: 40px;
+    position: relative;
+    opacity: 0.9;
+    overflow: hidden;
+    /* width:90vw; */
+    margin-left:auto;
+    margin-right:auto;
+}
+
+section h2 {
+    font-family: 'Arial', sans-serif;
+    font-weight: bold;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #c8a5e7;
+    font-family: "Mountains of Christmas", serif;
+    font-weight: 700;
+    font-style: normal;
+    text-shadow: 2px 2px #fefeff;
+}
+
+section p, section ul{
+    font-size: 1.1rem;
+    line-height: 1.8;
+    letter-spacing: 0.5px;
+    color: #fff;
+}
+
+section h3 {
+    font-size: 1.7rem;
+    color: #933bf1;
+    font-weight: 600;
+    margin-bottom: 15px;
+    font-family: "Emilys Candy", serif;
+    font-weight: 700;
+    font-style: normal;
+    text-shadow: 2px 2px #fff;
+}
+
+section ul {
+    padding-left: 20px;
+}
+
+section li {
+    margin-bottom: 10px;
+    list-style-type: none;
+    color: #350543;
+    font-weight:bold;
+    
+}
+
+.section p,.hemisphere p,.celebration p{
+    min-height: 100px;
+}
+
+
+
+li strong{
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 1.2em;
+    color:#1a43ac;
+    /* font-weight: 900; */
+    text-shadow: 2px 2px #b16edb;
+}
+
+
+/* Snowfall Animation */
+@keyframes snowfall {
+    0% {
+        top: -10px;
+        opacity: 0.9;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        top: 100%;
+        opacity: 0;
+    }
+}
+
+/* Snowflake Styling */
+section span {
+    position: absolute;
+    font-size: 2rem;
+    color: white;
+    animation: snowfall 10s linear infinite;
+}
+
+
+
+/* Footer */
+footer {
+    background-image: linear-gradient(to right,rgb(2, 2, 39),rgb(40, 1, 27),rgb(29, 3, 47),rgb(3, 39, 39),rgb(55, 3, 55));
+    text-align: center;
+    padding: 20px;
+    position: relative;
+}
+
+footer p {
+    font-size: 1rem;
+    background-image: linear-gradient(to right, rgb(123, 123, 250), rgb(241, 126, 241),rgb(247, 105, 247));
+    
+}
+
+footer nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+footer nav ul li {
+    margin: 0 10px;
+}
+
+footer nav ul li a {
+    text-decoration: none;
+    color: #dcacf1;
+    font-size: 1rem;
+    transition: color 0.3s;
+}
+
+footer nav ul li a:hover {
+    color: #9993f0;
+}
+
+/* Scroll Animations */
+section {
+    padding: 60px 20px;
+    min-height: auto;
+    text-align: center;
+    background-image: linear-gradient(to right,rgb(4, 4, 70),rgb(48, 2, 48),rgb(46, 5, 46));
+    margin-top: 50px;
+    border-radius: 20px;
+    margin-bottom: 40px;
+    position: relative;
+    opacity: 0.9;
+    overflow: hidden;
+}
+
+section span {
+    position: absolute;
+    font-size: 2rem;
+    color: white;
+    animation: snowfall 10s linear infinite;
+}
+
+section p{
+    padding: 20px;
+    min-height: auto;
+    text-align: center;
+    background-image: linear-gradient(rgb(92, 92, 218),rgb(199, 118, 199));
+    margin-top: 50px;
+    border-radius: 20px;
+    margin-bottom: 40px;
+    position: relative;
+    opacity: 0.9;
+    overflow: hidden;
+}
+
+section article{
+    padding: 30px 20px;
+    min-height: auto;
+    text-align: center;
+    background-image: linear-gradient(rgb(173, 173, 227),rgb(235, 179, 235));
+    margin-top: 50px;
+    border-radius: 20px;
+    margin-bottom: 40px;
+    position: relative;
+    opacity: 0.9;
+    overflow: hidden;
+}
+
+#hemispheres .unique{
+    padding: 20px;
+    min-height: 50px;
+   
+    background-image: linear-gradient(rgb(33, 33, 164),rgb(84, 11, 84));
+    margin-top: 50px;
+    border-radius: 20px;
+    margin-bottom: 40px;
+    position: relative;
+    opacity: 0.9;
+    overflow: hidden;
+}
+/* Responsive Styles */
+@media (max-width: 768px) {
+    #main-header {
+        padding: 15px 0;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    #main-nav ul {
+        flex-direction: column;
+    }
+
+    #main-nav ul li {
+        margin: 10px 0;
+    }
+
+    #hamburger-menu {
+        display: block;
+        cursor: pointer;
+    }
+
+    #main-nav {
+        display: none;
+        text-align: center;
+        width: 100%;
+    }
+
+    #main-nav.active {
+        display: block;
+    }
+}
+
+/* Scrollbar Styling */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #5d5dcb;
+    border-radius: 10px;
+}
+
+/* For a smooth scroll */
+html {
+    scroll-behavior: smooth;
+}
+
+p{
+    font-family: "Itim", cursive;
+    font-weight: 400;
+    font-style: normal;
+    font-size:1.5em
+}
+
+
+
+h2,h3{
+    display: inline-block;
+    white-space: nowrap; /* Prevents the text from wrapping */
+    animation: marquee 8s linear infinite; /* Marquee animation */
+}
+
+/* Keyframes for the marquee effect */
+@keyframes marquee {
+    0% {
+        transform: translateX(50%); /* Start from right */
+    }
+    100% {
+        transform: translateX(-50%); /* End at left */
+    }
+}
+
+
+section:hover,p:hover,article:hover,ul:hover{
+    animation:  shake-updown 0.5s ease-in-out;
+}
+
+@keyframes shake-updown {
+    0% { transform: translateY(0); }
+    25% { transform: translateY(-5px); }
+    50% { transform: translateY(5px); }
+    75% { transform: translateY(-5px); }
+    100% { transform: translateY(0); }
+}
