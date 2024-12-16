@@ -55,3 +55,42 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
+// JavaScript to dynamically create a hamburger menu
+document.addEventListener("DOMContentLoaded", () => {
+    const menuContainer = document.getElementById('menu-container');
+
+    // Create Hamburger Button
+    const hamburger = document.createElement('div');
+    hamburger.classList.add('hamburger');
+    for (let i = 0; i < 3; i++) {
+        const line = document.createElement('span');
+        hamburger.appendChild(line);
+    }
+
+    // Create Navbar
+    // const navbar = document.createElement('div');
+    // navbar.classList.add('navbar');
+
+    // Add Links to the Navbar
+    // const links = ['Home', 'About', 'Services', 'Contact'];
+    // links.forEach(linkText => {
+    //     const link = document.createElement('a');
+    //     link.href = `#${linkText.toLowerCase()}`;
+    //     link.textContent = linkText;
+    //     navbar.appendChild(link);
+    // });
+
+    // Append both elements to the container
+    menuContainer.appendChild(hamburger);
+    menuContainer.appendChild(main-nav);
+
+    // Add toggle functionality
+    // hamburger.addEventListener('click', () => {
+    //     navbar.classList.toggle('active');
+    // });
+});
+
+document.querySelector('.hamburger').addEventListener('click', () => {
+    const content = document.querySelector('#main-nav');
+    content.style.display = content.style.display === 'none' || content.style.display === '' ? 'block' : 'none';
+  });

@@ -288,9 +288,9 @@ section article{
     overflow: hidden;
 }
 /* Responsive Styles */
-@media (max-width: 768px) {
+@media (max-width: 960px) {
     #main-header {
-        padding: 15px 0;
+        padding: 15px ;
     }
 
     h1 {
@@ -302,13 +302,13 @@ section article{
     }
 
     #main-nav ul li {
-        margin: 10px 0;
+        margin: 10px ;
     }
 
-    #hamburger-menu {
+    /* #hamburger-menu {
         display: block;
         cursor: pointer;
-    }
+    } */
 
     #main-nav {
         display: none;
@@ -373,3 +373,119 @@ section:hover,p:hover,article:hover,ul:hover{
     75% { transform: translateY(-5px); }
     100% { transform: translateY(0); }
 }
+
+/* General Styles for Navbar */
+#main-nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    list-style-type: none;
+    /* background-color: #333; */
+    padding: 10px 20px;
+}
+
+#main-nav li {
+    margin: 15px;
+}
+
+#main-nav a {
+    text-decoration: none;
+    color: white;
+    font-size: 1rem;
+    padding: 5px 10px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+#main-nav a:hover {
+    background-color: #575757;
+    color: #d4d4d4;
+}
+
+#main-nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+
+#main-nav ul li {
+    margin: 15px;
+}
+
+#main-nav ul li a {
+    text-decoration: none;
+    color: #c4d7eb;
+    font-size: 1.2rem;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+#main-nav ul li a:hover {
+    color: #0e0e58;
+    background-image: url("https://i.pinimg.com/originals/ea/0c/78/ea0c788fc31bd4f4a93345d70cb4c1e8.gif"); 
+    /* Golden color on hover */
+    padding: 20px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-weight: 900;
+}
+
+#main-nav .active {
+    left: 0;
+}
+
+/* Media Query for Smaller Screens */
+@media (max-width: 960px) {
+    #main-nav {
+        flex-direction: column; /* Switch to vertical layout */
+        align-items: flex-start; /* Align items to the left */
+        padding: 10px;
+        /* position: relative; */
+        top:200px;
+        /* display:none; */
+       
+        /* left: -100%; Hide the navbar on mobile initially */
+        background-image: linear-gradient(to right,rgb(2, 2, 39),rgb(40, 1, 27),rgb(29, 3, 47),rgb(3, 39, 39),rgb(55, 3, 55));
+        padding: 20px 0;
+        z-index: 10;
+        text-align: center;
+        
+
+    }
+    
+
+    #main-nav li {
+        margin: 10px 0;
+         /* Add spacing between items vertically */
+    }
+
+    #main-nav a {
+        font-size: 1.2rem; /* Make text slightly larger for mobile */
+        width: 100%; /* Stretch links to full width */
+        padding: 10px 15px;
+    }
+
+    #main-nav ul li {
+        margin: 5px;
+        background-image:linear-gradient(to right,rgb(5, 5, 99),rgb(10, 10, 47),rgb(35, 3, 35));
+        padding:10px 20px;
+        border-radius: 20px;
+    }
+    #main-nav ul{
+        margin-right: auto;
+        margin-left: auto;
+    }
+    
+    #main-nav ul li a:hover{
+        padding:10px
+
+    }
+    header{
+        position:relative
+    }
+
+}
+
+
+
+
