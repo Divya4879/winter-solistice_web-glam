@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Realistic Christmas Tree</title>
+    <style>
+        body {
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #ffffff;
+            overflow: hidden;
+        }
+
+        .scene {
+            position: relative;
+            height: 600px;
+            width: 400px;
+        }
+
+        .tree {
+            position: absolute;
+            bottom: 100px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .tree-layer {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 0;
+            height: 0;
+            border-left: solid transparent;
+            border-right: solid transparent;
+            border-bottom: solid;
+            filter: drop-shadow(0 5px 5px rgba(0, 0, 0, 0.2));
+        }
+
+        .layer1 { border-width: 150px 80px 120px; border-bottom-color: #1a472a; bottom: 0; }
+        .layer2 { border-width: 140px 75px 110px; border-bottom-color: #2d5a3d; bottom: 80px; }
+        .layer3 { border-width: 130px 70px 100px; border-bottom-color: #1a472a; bottom: 160px; }
+        .layer4 { border-width: 120px 65px 90px; border-bottom-color: #2d5a3d; bottom: 220px; }
+        .layer5 { border-width: 100px 55px 80px; border-bottom-color: #1a472a; bottom: 280px; }
+        .layer6 { border-width: 80px 45px 70px; border-bottom-color: #2d5a3d; bottom: 340px; }
+
+        .star {
+            position: absolute;
+            top: -30px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 40px;
+            height: 40px;
+            background: linear-gradient(135deg, #ffd700 0%, #ffeb3b 50%, #ffd700 100%);
+            clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+            animation: starGlow 2s infinite alternate;
+        }
+
+        .ornament {
+            position: absolute;
+            border-radius: 50%;
+            background: radial-gradient(circle at 30% 30%, #ffffff 0%, currentColor 60%);
+            box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+            animation: ornamentGlow 1.5s infinite alternate;
+        }
+
+        .present {
+            position: absolute;
+            bottom: 0;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        }
+
+        .present::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 0;
+            right: 0;
+            height: 10%;
+            background-color: currentColor;
+            filter: brightness(120%);
+        }
+
+        .present::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 50%;
+            width: 10%;
+            background-color: currentColor;
+            filter: brightness(120%);
+        }
+
+        @keyframes starGlow {
+            0% { filter: brightness(100%) drop-shadow(0 0 5px rgba(255, 215, 0, 0.5)); }
+            100% { filter: brightness(120%) drop-shadow(0 0 10px rgba(255, 215, 0, 0.8)); }
+        }
+
+        @keyframes ornamentGlow {
+            0% { filter: brightness(100%); }
+            100% { filter: brightness(120%); }
+        }
+    </style>
+</head>
+<body>
+    <div class="scene">
+        <div class="tree">
+            <div class="star"></div>
+            <div class="tree-layer layer1"></div>
+            <div class="tree-layer layer2"></div>
+            <div class="tree-layer layer3"></div>
+            <div class="tree-layer layer4"></div>
+            <div class="tree-layer layer5"></div>
+            <div class="tree-layer layer6"></div>
+
+            <!-- Red Ornaments -->
+            <div class="ornament" style="width: 20px; height: 20px; left: 30%; top: 20%; color: #ff4444;"></div>
+            <div class="ornament" style="width: 24px; height: 24px; right: 25%; top: 35%; color: #ff4444;"></div>
+            <div class="ornament" style="width: 22px; height: 22px; left: 40%; top: 50%; color: #ff4444;"></div>
+            <div class="ornament" style="width: 26px; height: 26px; right: 35%; top: 65%; color: #ff4444;"></div>
+
+            <!-- Gold Ornaments -->
+            <div class="ornament" style="width: 22px; height: 22px; left: 60%; top: 25%; color: #ffd700;"></div>
+            <div class="ornament" style="width: 20px; height: 20px; right: 45%; top: 40%; color: #ffd700;"></div>
+            <div class="ornament" style="width: 24px; height: 24px; left: 25%; top: 60%; color: #ffd700;"></div>
+            <div class="ornament" style="width: 22px; height: 22px; right: 30%; top: 75%; color: #ffd700;"></div>
+
+            <!-- White Ornaments -->
+            <div class="ornament" style="width: 20px; height: 20px; left: 45%; top: 30%; color: #ffffff;"></div>
+            <div class="ornament" style="width: 22px; height: 22px; right: 55%; top: 45%; color: #ffffff;"></div>
+            <div class="ornament" style="width: 24px; height: 24px; left: 35%; top: 70%; color: #ffffff;"></div>
+
+            <!-- Presents -->
+            <div class="present" style="width: 60px; height: 50px; left: 20%; color: #ffd700;"></div>
+            <div class="present" style="width: 70px; height: 60px; left: 40%; color: #ffd700;"></div>
+            <div class="present" style="width: 50px; height: 45px; right: 25%; color: #ffd700;"></div>
+            <div class="present" style="width: 65px; height: 55px; right: 35%; color: #ffd700;"></div>
+        </div>
+    </div>
+</body>
+</html>
