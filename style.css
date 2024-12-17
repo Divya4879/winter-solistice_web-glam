@@ -1,47 +1,44 @@
-/*  */
+/* Imported the Google fonts used here */
 @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&family=Emilys+Candy&family=Itim&family=Mountains+of+Christmas:wght@400;700&display=swap');
 
+/* Done for GSAP animation behavior */
+* {
+    scroll-behavior: smooth;
+}
 
 /* General Styling */
 body {
-    font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
     background-image: url("https://media1.tenor.com/m/S7zqThJnnSMAAAAC/have-a-beautiful-day.gif");
-    color: white;
+    color: rgb(228, 231, 244);
     background-repeat: no-repeat;
     background-size: cover;
-    
 }
 
-
-/* Header and Navigation */
+/* Header and Navigation- both in 1 section btw */
 header {
     position: sticky;
     top: 0;
-    background-image: linear-gradient(to right,rgb(2, 2, 39),rgb(40, 1, 27),rgb(29, 3, 47),rgb(3, 39, 39),rgb(55, 3, 55));
+    background-image: linear-gradient(to right, rgb(2, 2, 39), rgb(40, 1, 27), rgb(29, 3, 47), rgb(3, 39, 39), rgb(55, 3, 55));
     padding: 20px 0;
     z-index: 10;
     text-align: center;
-    
 }
 
-#main-heading{
-    font-size: 3rem;
-    color: #fff;
-    font-weight: bold;
+#main-heading {
     text-transform: uppercase;
     letter-spacing: 1px;
     background: linear-gradient(to right, #a9cfe8, #477ba9, #aa55d1, #9840cf);
     -webkit-background-clip: text;
-    color: transparent;
-    color:rgb(156, 182, 236);
+    background-clip: text;
+    color: rgb(156, 182, 236);
     font-family: "Cinzel", serif;
     font-optical-sizing: auto;
     font-weight: 900;
     font-style: normal;
     text-shadow: 2px 2px #ffffff;
-    
+    font-size: 2.5rem;
 }
 
 #main-nav ul {
@@ -59,71 +56,52 @@ header {
 #main-nav ul li a {
     text-decoration: none;
     color: #c4d7eb;
-    font-size: 1.2rem;
-    font-weight: 500;
+    font-size: 1.1rem;
+    font-weight: 700;
     transition: color 0.3s;
 }
 
 #main-nav ul li a:hover {
     color: #0e0e58;
-    background-image: url("https://i.pinimg.com/originals/ea/0c/78/ea0c788fc31bd4f4a93345d70cb4c1e8.gif"); 
-    /* Golden color on hover */
-    padding: 20px;
+    background-image: url("https://i.pinimg.com/originals/ea/0c/78/ea0c788fc31bd4f4a93345d70cb4c1e8.gif");
+    padding: 15px;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     font-weight: 900;
 }
 
-#hamburger-menu {
-    display: none; /* Default: hide hamburger */
-}
-
 /* Section Styling */
-section {
+section,
+#traditions ul {
     padding: 60px 20px;
     min-height: 200px;
     text-align: center;
     background: rgba(0, 20, 40, 0.8);
-    margin-top: 50px;
-    border-radius: 10px;
-    margin-bottom: 40px;
+    border-radius: 20px;
     position: relative;
     opacity: 0.9;
     overflow: hidden;
-    width:90vw;
-    margin-left:auto;
-    margin-right:auto;
+    width: 90vw;
+    margin: 50px auto 40px auto;
 }
 
-#traditions ul{
-    padding: 60px 20px;
-    min-height: 200px;
-    text-align: center;
-    background-image: linear-gradient(to right,rgb(165, 165, 247),rgb(248, 150, 248),rgb(234, 111, 234));
-    margin-top: 40px;
-    border-radius: 20px;
-    margin-bottom: 40px;
-    position: relative;
-    opacity: 0.9;
-    overflow: hidden;
-    /* width:90vw; */
-    margin-left:auto;
-    margin-right:auto;
+#traditions ul {
+    background-image: linear-gradient(to right, rgb(165, 165, 247), rgb(248, 150, 248), rgb(234, 111, 234));
+    margin: 40px auto;
 }
 
 section h2 {
-    font-family: 'Arial', sans-serif;
-    font-weight: bold;
     font-size: 2.5rem;
     margin-bottom: 20px;
     color: #c8a5e7;
     font-family: "Mountains of Christmas", serif;
     font-weight: 700;
     font-style: normal;
-    text-shadow: 2px 2px #fefeff;
+    text-shadow: 2px 2px #fff;
 }
 
-section p, section ul{
-    font-size: 1.1rem;
+section p,
+section ul {
+    font-size: 1.2rem;
     line-height: 1.8;
     letter-spacing: 0.5px;
     color: #fff;
@@ -132,7 +110,6 @@ section p, section ul{
 section h3 {
     font-size: 1.7rem;
     color: #933bf1;
-    font-weight: 600;
     margin-bottom: 15px;
     font-family: "Emilys Candy", serif;
     font-weight: 700;
@@ -148,24 +125,21 @@ section li {
     margin-bottom: 10px;
     list-style-type: none;
     color: #350543;
-    font-weight:bold;
-    
+    font-weight: bold;
 }
 
-.section p,.hemisphere p,.celebration p{
+.section p,
+.hemisphere p,
+.celebration p {
     min-height: 100px;
 }
 
-
-
-li strong{
+li strong {
     font-family: 'Courier New', Courier, monospace;
     font-size: 1.2em;
-    color:#1a43ac;
-    /* font-weight: 900; */
+    color: #1a43ac;
     text-shadow: 2px 2px #b16edb;
 }
-
 
 /* Snowfall Animation */
 @keyframes snowfall {
@@ -173,9 +147,11 @@ li strong{
         top: -10px;
         opacity: 0.9;
     }
+
     50% {
         opacity: 1;
     }
+
     100% {
         top: 100%;
         opacity: 0;
@@ -190,11 +166,9 @@ section span {
     animation: snowfall 10s linear infinite;
 }
 
-
-
-/* Footer */
+/* Footer section*/
 footer {
-    background-image: linear-gradient(to right,rgb(2, 2, 39),rgb(40, 1, 27),rgb(29, 3, 47),rgb(3, 39, 39),rgb(55, 3, 55));
+    background-image: linear-gradient(to right, rgb(2, 2, 39), rgb(40, 1, 27), rgb(29, 3, 47), rgb(3, 39, 39), rgb(55, 3, 55));
     text-align: center;
     padding: 20px;
     position: relative;
@@ -202,8 +176,7 @@ footer {
 
 footer p {
     font-size: 1rem;
-    background-image: linear-gradient(to right, rgb(123, 123, 250), rgb(241, 126, 241),rgb(247, 105, 247));
-    
+    background-image: linear-gradient(to right, rgb(123, 123, 250), rgb(241, 126, 241), rgb(247, 105, 247));
 }
 
 footer nav ul {
@@ -230,30 +203,14 @@ footer nav ul li a:hover {
 
 /* Scroll Animations */
 section {
-    padding: 60px 20px;
-    min-height: auto;
-    text-align: center;
-    background-image: linear-gradient(to right,rgb(4, 4, 70),rgb(48, 2, 48),rgb(46, 5, 46));
-    margin-top: 50px;
-    border-radius: 20px;
-    margin-bottom: 40px;
-    position: relative;
-    opacity: 0.9;
-    overflow: hidden;
+    background-image: linear-gradient(to right, rgb(4, 4, 70), rgb(48, 2, 48), rgb(46, 5, 46));  
 }
 
-section span {
-    position: absolute;
-    font-size: 2rem;
-    color: white;
-    animation: snowfall 10s linear infinite;
-}
-
-section p{
+section p,section article,#hemispheres .unique{
     padding: 20px;
     min-height: auto;
     text-align: center;
-    background-image: linear-gradient(rgb(92, 92, 218),rgb(199, 118, 199));
+    background-image: linear-gradient(rgb(92, 92, 218), rgb(199, 118, 199));
     margin-top: 50px;
     border-radius: 20px;
     margin-bottom: 40px;
@@ -262,35 +219,20 @@ section p{
     overflow: hidden;
 }
 
-section article{
+section article {
     padding: 30px 20px;
-    min-height: auto;
-    text-align: center;
-    background-image: linear-gradient(rgb(173, 173, 227),rgb(235, 179, 235));
-    margin-top: 50px;
-    border-radius: 20px;
-    margin-bottom: 40px;
-    position: relative;
-    opacity: 0.9;
-    overflow: hidden;
+    background-image: linear-gradient(rgb(173, 173, 227), rgb(235, 179, 235));
 }
 
-#hemispheres .unique{
-    padding: 20px;
+#hemispheres .unique {
     min-height: 50px;
-   
-    background-image: linear-gradient(rgb(33, 33, 164),rgb(84, 11, 84));
-    margin-top: 50px;
-    border-radius: 20px;
-    margin-bottom: 40px;
-    position: relative;
-    opacity: 0.9;
-    overflow: hidden;
+    background-image: linear-gradient(rgb(33, 33, 164), rgb(84, 11, 84));
 }
-/* Responsive Styles */
+
+/* Responsive Styles - Navbar*/
 @media (max-width: 960px) {
     #main-header {
-        padding: 15px ;
+        padding: 15px;
     }
 
     h1 {
@@ -302,13 +244,8 @@ section article{
     }
 
     #main-nav ul li {
-        margin: 10px ;
+        margin: 10px;
     }
-
-    /* #hamburger-menu {
-        display: block;
-        cursor: pointer;
-    } */
 
     #main-nav {
         display: none;
@@ -331,47 +268,59 @@ section article{
     border-radius: 10px;
 }
 
-/* For a smooth scroll */
-html {
-    scroll-behavior: smooth;
-}
-
-p{
+/* Font families- especially chosen for their winter theme */
+p {
     font-family: "Itim", cursive;
     font-weight: 400;
     font-style: normal;
-    font-size:1.5em
+    font-size: 1.5em
 }
 
-
-
-h2,h3{
+h2,
+h3 {
     display: inline-block;
-    white-space: nowrap; /* Prevents the text from wrapping */
+    white-space: nowrap;
     animation: marquee 8s linear infinite; /* Marquee animation */
 }
 
 /* Keyframes for the marquee effect */
 @keyframes marquee {
     0% {
-        transform: translateX(50%); /* Start from right */
+        transform: translateX(50%);/* Start from right */
     }
+
     100% {
         transform: translateX(-50%); /* End at left */
     }
 }
 
-
-section:hover,p:hover,article:hover,ul:hover{
-    animation:  shake-updown 0.5s ease-in-out;
+section:hover,
+p:hover,
+article:hover,
+ul:hover {
+    animation: shake-updown 0.5s ease-in-out;
 }
 
 @keyframes shake-updown {
-    0% { transform: translateY(0); }
-    25% { transform: translateY(-5px); }
-    50% { transform: translateY(5px); }
-    75% { transform: translateY(-5px); }
-    100% { transform: translateY(0); }
+    0% {
+        transform: translateY(0);
+    }
+
+    25% {
+        transform: translateY(-5px);
+    }
+
+    50% {
+        transform: translateY(5px);
+    }
+
+    75% {
+        transform: translateY(-5px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
 }
 
 /* General Styles for Navbar */
@@ -380,13 +329,12 @@ section:hover,p:hover,article:hover,ul:hover{
     justify-content: space-around;
     align-items: center;
     list-style-type: none;
-    /* background-color: #333; */
     padding: 10px 20px;
 }
 
-#main-nav li {
-    margin: 15px;
-}
+/* #main-nav li {
+    margin: 5px;
+} */
 
 #main-nav a {
     text-decoration: none;
@@ -410,7 +358,7 @@ section:hover,p:hover,article:hover,ul:hover{
 }
 
 #main-nav ul li {
-    margin: 15px;
+    margin: 15px 0;
 }
 
 #main-nav ul li a {
@@ -423,69 +371,45 @@ section:hover,p:hover,article:hover,ul:hover{
 
 #main-nav ul li a:hover {
     color: #0e0e58;
-    background-image: url("https://i.pinimg.com/originals/ea/0c/78/ea0c788fc31bd4f4a93345d70cb4c1e8.gif"); 
-    /* Golden color on hover */
-    padding: 20px;
+    background-image: url("https://i.pinimg.com/originals/ea/0c/78/ea0c788fc31bd4f4a93345d70cb4c1e8.gif");
+    padding: 5px;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     font-weight: 900;
-}
-
-#main-nav .active {
-    left: 0;
+    border-radius: 20px;
 }
 
 /* Media Query for Smaller Screens */
 @media (max-width: 960px) {
     #main-nav {
-        flex-direction: column; /* Switch to vertical layout */
-        align-items: flex-start; /* Align items to the left */
+        flex-direction: column;
+        align-items: flex-start;
         padding: 10px;
-        /* position: relative; */
-        top:200px;
-        /* display:none; */
-       
-        /* left: -100%; Hide the navbar on mobile initially */
-        background-image: linear-gradient(to right,rgb(2, 2, 39),rgb(40, 1, 27),rgb(29, 3, 47),rgb(3, 39, 39),rgb(55, 3, 55));
+        top: 200px;
+        background-image: linear-gradient(to right, rgb(2, 2, 39), rgb(40, 1, 27), rgb(29, 3, 47), rgb(3, 39, 39), rgb(55, 3, 55));
         padding: 20px 0;
         z-index: 10;
         text-align: center;
-        
-
-    }
-    
-
-    #main-nav li {
-        margin: 10px 0;
-         /* Add spacing between items vertically */
-    }
-
-    #main-nav a {
-        font-size: 1.2rem; /* Make text slightly larger for mobile */
-        width: 100%; /* Stretch links to full width */
-        padding: 10px 15px;
     }
 
     #main-nav ul li {
         margin: 5px;
-        background-image:linear-gradient(to right,rgb(5, 5, 99),rgb(10, 10, 47),rgb(35, 3, 35));
-        padding:10px 20px;
+        background-image: linear-gradient(to right, rgb(5, 5, 99), rgb(10, 10, 47), rgb(35, 3, 35));
+        padding: 10px 20px;
         border-radius: 20px;
     }
-    #main-nav ul{
+
+    #main-nav ul {
         margin-right: auto;
         margin-left: auto;
     }
-    
-    #main-nav ul li a:hover{
-        padding:10px
 
+    #main-nav ul li a:hover {
+        background-image: url("https://i.pinimg.com/originals/ea/0c/78/ea0c788fc31bd4f4a93345d70cb4c1e8.gif");
+        padding:  10px 20px;
+        border-radius: 20px;
     }
-    header{
-        position:relative
+   
+    header {
+        position: relative
     }
-
 }
-
-
-
-
