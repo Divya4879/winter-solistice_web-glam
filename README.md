@@ -2,6 +2,8 @@
 
 Live link- https://divya4879.github.io/winter-solistice_web-glam
 
+Live preview - https://codepen.io/divya-2002/pen/xbKgYZY
+
 # Checkout this preview:- 
 
 ![Screenshot 2024-12-17 092745](https://github.com/user-attachments/assets/d2645319-7f27-4352-a2b6-86d385f30055)
