@@ -155,16 +155,16 @@ li strong {
         z-index:-1;
     }
 
-    
-    90% {
+    80% {
         opacity: 0.9;
         z-index:-1;
     }
+    
 
      100% {
         top: 100%;
         opacity: 0;
-        z-index:1
+        z-index:1;
     }
 }
 }
