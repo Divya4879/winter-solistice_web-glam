@@ -146,6 +146,7 @@ li strong {
     0% {
         top: -10px;
         opacity: 0.9;
+        z-index:-1;
     }
 
     20% {
@@ -156,6 +157,7 @@ li strong {
     100% {
         top: 100%;
         opacity: 0;
+        z-index:-1;
     }
 }
 
