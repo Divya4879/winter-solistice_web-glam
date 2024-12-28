@@ -146,29 +146,17 @@ li strong {
     0% {
         top: -10px;
         opacity: 0.9;
-        z-index:-1;
     }
 
-   
-    10% {
-        opacity: 0.9;
-        z-index:-1;
+    50% {
+        opacity: 1;
     }
 
-
-    80% {
-        opacity: 0.9;
-        z-index:-1;
-    }
-    
-
-     100% {
+    100% {
         top: 100%;
         opacity: 0;
-        
     }
 }
-
 
 /* Snowflake Styling */
 section span {
